@@ -42,7 +42,7 @@ def control_commands(initial_position, initial_direction, commands):
                 direction = "N"
             elif direction == "W":
                 direction = "S"
-                
+
             # check the previous direction for up and down
             elif direction == "Up":
                 if previous_direction == "N":
@@ -100,6 +100,35 @@ def control_commands(initial_position, initial_direction, commands):
                     pass
                 elif previous_direction == "Down":
                     pass
+                
+            
+        elif command == "u":
+            if direction == "N":
+                direction = "Up"
+            elif direction == "S":
+                direction = "Down"
+            elif direction == "E":
+                direction = "Up"
+            elif direction == "W":
+                direction = "Down"
+            elif direction == "Up":
+                pass
+            elif direction == "Down":
+                pass
+                
+        elif command == "d":
+            if direction == "N":
+                direction = "Down"
+            elif direction == "S":
+                direction = "Up"
+            elif direction == "E":
+                direction = "Down"
+            elif direction == "W":
+                direction = "Up"
+            elif direction == "Up":
+                pass
+            elif direction == "Down":
+                pass
         
                 
        
