@@ -19,6 +19,24 @@ class TestSpacecraftControl(unittest.TestCase):
         final_position, final_direction = control_commands(initial_position, initial_direction, commands)
         self.assertEqual(final_position, (0, -1, 0))
         self.assertEqual(final_direction, "N")
+
+    # test for left movement ( l )
+    def test_turn_left(self):
+        initial_position = (0, 0, 0)
+        initial_direction = "N"
+        commands = ["l"]
+        final_position, final_direction = control_commands(initial_position, initial_direction, commands)
+        self.assertEqual(final_position, (0, 0, 0))
+        self.assertEqual(final_direction, "W")
+
+    # test for right movement ( r )    
+    def test_turn_right(self):
+        initial_position = (0, 0, 0)
+        initial_direction = "N"
+        commands = ["r"]
+        final_position, final_direction = control_commands(initial_position, initial_direction, commands)
+        self.assertEqual(final_position, (0, 0, 0))
+        self.assertEqual(final_direction, "E")
         
    
 if __name__ == "__main__":
