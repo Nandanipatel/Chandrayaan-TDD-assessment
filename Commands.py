@@ -2,7 +2,7 @@ from Model import control_commands
 
 initial_position = (0, 0, 0)
 initial_direction = "N"
-commands = ["f","r","u","l"]
+commands = ["f", "r", "u","b","l"]
 
 
 final_position, final_direction = control_commands(initial_position, initial_direction, commands)
